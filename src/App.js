@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/styles.scss';
+import './styles/cv.scss';
+import {useRef} from "react";
+import Cv from './components/cv';
+import {Container, Button, Col, Row, Card} from "react-bootstrap";
+import {savePDF} from "@progress/kendo-react-pdf";
 
 function App() {
+  const cv = useRef(null);
+
+  const exportPDF = () => {
+    if (!cv.current) {
+      return;
+    }
+
+    savePDF(cv.current, {
+      paperSize: "A4",
+      fileName: `Romaric_Guth_CV.pdf`,
+    });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Container>
+        <Row className="justify-content-center my-5">
+          <Col xs="auto">
+            <Button onClick={exportPDF}>Export to PDF</Button>
+          </Col>
+        </Row>
+        <Row className="justify-content-center">
+          <Col xs="auto">
+            <Card className="cv-page">
+              <div ref={cv}>
+                <Cv/>
+              </div>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
