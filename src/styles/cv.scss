@@ -1,9 +1,56 @@
-$a4_width: 21cm;
-$a4_height: 29.7cm;
+@use 'colors';
+@use 'spacing';
+@import 'text';
 
-.cv-page {
-  width: $a4_width;
-  height: $a4_height;
-  background-color: #FFFFFF;
-  margin: 20px;
+.cv-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.cv-header {
+  background-color: colors.$header1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-inline: spacing.$medium;
+}
+
+.onHeader {
+  color: white;
+}
+
+.name {
+  @extend .onHeader;
+  font-size: $bigFontSize;
+  font-weight: bold;
+  margin-top: spacing.$large;
+}
+
+.title {
+  @extend .onHeader;
+  font-size: $bigFontSize;
+  margin-top: spacing.$medium;
+  margin-bottom: spacing.$medium;
+}
+
+.contact-container {
+  justify-content: center;
+  display: flex;
+}
+
+.contact {
+  @extend .onHeader;
+}
+
+.photo {
+  height: auto;
+  width: 4cm;
+  background-color: gray;
+}
+
+.cv-body {
+  padding: spacing.$medium;
+  display: flex;
+  flex: 1;
 }
