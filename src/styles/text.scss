@@ -1,6 +1,26 @@
+@use 'colors';
+
 $bigFontSize: 1cm;
-$bodyFontSize: 4mm;
+$sectionHeader1FontSize: 8mm;
+$sectionHeader2FontSize: 5mm;
+$sectionHeader3FontSize: 4mm;
+$bodyFontSize: 3.6mm;
 
 .text-body {
   font-size: $bodyFontSize;
+}
+
+.text-header {
+  font-size: $sectionHeader1FontSize;
+  color: colors.$header1;
+}
+
+.text-header2 {
+  font-size: $sectionHeader2FontSize;
+  color: colors.$header2;
+}
+
+.text-header3 {
+  font-size: $sectionHeader3FontSize;
+  color: colors.$header3;
 }

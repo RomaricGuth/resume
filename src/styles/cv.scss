@@ -53,4 +53,10 @@
   padding: spacing.$medium;
   display: flex;
   flex: 1;
+  flex-direction: column;
+}
+
+.cv-body-row {
+  display: flex;
+  flex-direction: row;
 }

@@ -1,0 +1,53 @@
+@import 'text';
+@import 'spacing';
+@import 'colors';
+
+.section {
+  flex: 1;
+}
+
+.section-header {
+  margin-bottom: $medium;
+  width: auto;
+}
+
+.section-title {
+  @extend .text-header;
+}
+
+.section-underline {
+  height: $hairline;
+  width: auto;
+  background-color: $header1;
+}
+
+.section-item {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: $medium;
+}
+
+.section-item-description {
+  @extend .text-header3;
+  flex: 2;
+}
+
+.section-item-separator {
+  width: $hairline;
+  height: auto;
+  background-color: $header3;
+  margin-inline: $small;
+}
+
+.section-item-content {
+  flex: 7;
+}
+
+.section-item-title {
+  @extend .text-header2;
+  margin-bottom: $xsmall;
+}
+
+.section-item-body {
+  @extend .text-body
+}

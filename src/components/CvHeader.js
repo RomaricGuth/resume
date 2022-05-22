@@ -1,3 +1,5 @@
+import photo from '../assets/profile_picture.jpg'
+
 function CvHeader() {
   return (
     <div className="cv-header">
@@ -17,7 +19,7 @@ function CvHeader() {
         </div>
       </div>
       <div className="photo">
-        <img className="photo" />
+        <img src={photo} className="photo" />
       </div>
     </div>
   )
