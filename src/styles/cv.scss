@@ -2,16 +2,24 @@
 @use 'spacing';
 @import 'text';
 
-.cv-container {
+.cv-row {
   display: flex;
-  flex: 1;
+  flex-direction: row;
+}
+
+.cv-column {
+  display: flex;
   flex-direction: column;
 }
 
+.cv-container {
+  @extend .cv-column;
+  flex: 1;
+}
+
 .cv-header {
+  @extend .cv-row;
   background-color: colors.$header1;
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
   padding-inline: spacing.$medium;
 }
@@ -46,17 +54,18 @@
 .photo {
   height: auto;
   width: 4cm;
-  background-color: gray;
+  background-color: colors.$header1;
 }
 
 .cv-body {
-  padding: spacing.$medium;
-  display: flex;
+  @extend .cv-column;
   flex: 1;
-  flex-direction: column;
+  padding: spacing.$medium;
 }
 
-.cv-body-row {
-  display: flex;
-  flex-direction: row;
+.cv-text-row {
+  @extend .cv-row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: spacing.$tiny;
 }

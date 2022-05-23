@@ -8,7 +8,7 @@ function CvHeader() {
           Romaric GUTH
         </div>
         <div className="title">
-          Software Engineer
+          Embedded Software Engineer
         </div>
       </div>
       <div className="contact-container">
