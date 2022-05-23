@@ -1,4 +1,5 @@
 import Section from "./Section";
+import Achievement from "./Achievement";
 
 function CvBody() {
   return (
@@ -9,56 +10,114 @@ function CvBody() {
           description="2019-2022"
           title="Embedded Software Engineer Apprentice | SAGEMCOM"
         >
-          Worked as main developper on the analytics collection module.<br/>
-          Took part in the developpement of a custom Alexa skill designed to work as a hotline.
+          <Achievement
+            text="Worked as main developper on the analytics collection module."
+            skills={["C", "C++", "Linux"]}
+          />
+          <Achievement
+            text="Took part in the developpement of a custom Alexa skill designed to work as a hotline."
+            skills={["Nodejs", "APL"]}
+          />
         </Section.Item>
         <Section.Item
           description="2018-2019"
           title="Bridge Teacher | LYON YOUNG BRIDGE CLUB"
         >
-          Taught bridge lessons up to 5h a week.<br />
-          Initiated people aged 13 to 35 to play bridge.
+          <Achievement
+            text="Taught bridge lessons up to 5h a week to initiate people aged from 13 to 35."
+            skills={["Teaching", "Patience"]}
+          />
         </Section.Item>
       </Section>
       <div className="cv-row">
-        <Section style={styles.rowSection}>
-          <Section.Header title="Education"/>
-          <Section.Item
-            description="2019-2022"
-            title="EPITA Apprenticeship"
-          >
-            Master degree focused on Web, Mobile and Software development<br/>
-            Semester 5 17.5/20 rank unknown
-          </Section.Item>
-          <Section.Item
-            description="2017-2019"
-            title="Université Claude Bernard, Lyon 1"
-          >
-            Mathematics and Computer Science License<br/>
-            Semester 1 15.2/20 rank 26/365<br/>
-            Semester 2 16.1/20 rank 13/306<br/>
-            Semester 3 16.5/20 rank unknown<br/>
-            Semester 4 16.3/20 rank 3/154
-          </Section.Item>
-        </Section>
+        <div className="cv-middle-section">
+          <Section>
+            <Section.Header title="Education"/>
+            <Section.Item
+              description="2019-2022"
+              title="EPITA Apprenticeship"
+            >
+              {/*
+              <Achievement
+                text=""
+                skills={["C", "C++", "Java", "React", "AWS", "Devops", "Kotlin", "Android", "Swift", "IOS"]}
+                award="Average : 16.83/20 Rank : 2/20"
+              />
+              */}
+              <div className="summary">
+                Master degree focused on Web, Mobile and Software development
+              </div>
+              <div className="award">
+                Average : 16.83/20 Rank : 2/20
+              </div>
+            </Section.Item>
+            <Section.Item
+              description="2017-2019"
+              title="Université Claude Bernard, Lyon 1"
+            >
+              {/*
+              <Achievement
+                text="Mathematics and Computer Science License"
+                skills={["C++", "HTML", "CSS", "Javascript", "Algebra", "Statistics"]}
+                award="Average : 16/20 Best Rank : 3/154"
+              />
+              */}
+              <div className="summary">
+                Mathematics and Computer Science License
+              </div>
+              <div className="award">
+                Average : 16/20 Best Rank : 3/154
+              </div>
+            </Section.Item>
+          </Section>
+          <Section>
+            <Section.Header title="Skills"/>
+            <div className="section-item-short">
+              <div className="text-header3">Software development</div>
+              C, C++, Java
+            </div>
+
+            <div className="section-item-short">
+              <div className="text-header3">Web</div>
+               HTML, CSS, Javascript, React, Devops, AWS
+            </div>
+
+            <div className="section-item-short">
+              <div className="text-header3">Mobile</div>
+              React Native, Kotlin, Android, Swift, IOS
+            </div>
+
+            <div className="section-item-short">
+              <div className="text-header3">Mathematics</div>
+              Algebra, Statistics
+            </div>
+          </Section>
+        </div>
         <Section>
           <Section.Header title="Projects"/>
           <Section.Item
             description="Since 2020"
             title="Planeat - Personal project"
           >
-            Cooking mobile app React Native<br />
-            Create, import and customize your recipes<br/>
-            Plan your meals and generate your shopping list<br/>
+            <div className="summary">
+              Mobile app - Cooking planner and organizer
+            </div>
+            Developed in React Native.<br/>
+            Allow users to create, import and customize their recipes within the app.<br/>
+            Makes it easy to plan meals through the week and generate a shopping list to eat homemade without pain.
           </Section.Item>
           <Section.Item
             description="2022"
             title="Equals - EPITA"
           >
-            <a href="https://equals-front.herokuapp.com">EQUALS</a>
-            Data analysis - Women compared to Men in society since 2000.<br/>
+            <div className="summary">
+              Web page - Women compared to Men in society since 2000.
+            </div>
+            <div className="cv-link">
+              <a href="https://equals-front.herokuapp.com">https://equals-front.herokuapp.com</a>
+            </div>
             Programmed data prediction using mathematical interpolation functions.<br/>
-            Designed interface to visualize results and alter parameters.
+            Developed an interface using Vue.js to visualize results and alter parameters.<br/>
           </Section.Item>
         </Section>
       </div>
@@ -93,13 +152,6 @@ function CvBody() {
       </Section>
     </div>
   )
-}
-
-const styles = {
-  rowSection: {
-    paddingRight: 4,
-    marginRight: 4,
-  }
 }
 
 export default CvBody;

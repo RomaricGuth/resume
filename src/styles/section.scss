@@ -51,3 +51,8 @@
 .section-item-body {
   @extend .text-body
 }
+
+.section-item-short {
+  @extend .section-item, .text-body;
+  justify-content: space-between;
+}

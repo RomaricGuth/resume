@@ -28,27 +28,36 @@
   color: white;
 }
 
+.cv-header-text-container {
+  @extend .onHeader, .cv-column;
+  justify-content: space-around;
+  padding-top: spacing.$medium;
+  padding-bottom: spacing.$medium;
+}
+
 .name {
-  @extend .onHeader;
   font-size: $bigFontSize;
   font-weight: bold;
-  margin-top: spacing.$large;
 }
 
 .title {
-  @extend .onHeader;
   font-size: $bigFontSize;
   margin-top: spacing.$medium;
   margin-bottom: spacing.$medium;
 }
 
 .contact-container {
-  justify-content: center;
-  display: flex;
+  @extend .cv-row;
+  align-items: center;
+  margin-left: spacing.$medium;
 }
 
 .contact {
-  @extend .onHeader;
+  margin-right: spacing.$small;
+}
+
+.cv-icon {
+  margin-right: spacing.$tiny;
 }
 
 .photo {
@@ -68,4 +77,33 @@
   justify-content: space-between;
   align-items: center;
   margin-top: spacing.$tiny;
+}
+
+.achievement {
+  @extend .cv-column;
+}
+
+.skills {
+  font-weight: bold;
+}
+
+.award {
+  font-style: italic;
+}
+
+.summary {
+  font-size: $sectionHeader3FontSize;
+  margin-bottom: spacing.$small;
+}
+
+.cv-middle-section {
+  @extend .cv-column;
+  flex: 1;
+  padding-right: spacing.$small;
+  margin-right: spacing.$small;
+}
+
+.cv-link {
+  margin-bottom: spacing.$small;
+  text-align: center;
 }
