@@ -23,7 +23,7 @@ function App() {
     savePDF(cv.current, {
       paperSize: "A4",
       fileName: `Romaric_Guth_CV.pdf`,
-      scale: 0.8,
+      scale: 0.75,
     });
   };
 
