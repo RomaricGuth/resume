@@ -1,8 +1,12 @@
 import photo from '../assets/profile_picture.jpg'
 import {FaLinkedinIn, FaGithub, FaPhone} from "react-icons/fa";
 import {MdEmail} from "react-icons/md";
+import {useContext} from "react";
+import {CvOptionsContext} from "../utils/CvOptionsContext";
 
 function CvHeader() {
+  const {options} = useContext(CvOptionsContext);
+
   return (
     <div className="cv-header">
       <div className="cv-header-text-container">
@@ -16,13 +20,13 @@ function CvHeader() {
               <FaGithub className="cv-icon" /> <a href="https://github.com/RomaricGuth">RomaricGuth</a><br/>
             </div>
             <div className="contact">
-              <FaPhone className="cv-icon" /> XX XX XX XX XX <br/>
-              <MdEmail className="cv-icon" />ro.guth@free.fr <br/>
+              <FaPhone className="cv-icon" /> {options.phone ? options.phone : "hidden"}<br/>
+              <MdEmail className="cv-icon" /> {options.email ? options.email : "hidden"}<br/>
             </div>
           </div>
         </div>
         <div className="title">
-          Embedded Software Engineer
+          {options.position}
         </div>
       </div>
       <div className="photo">

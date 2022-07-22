@@ -4,6 +4,8 @@ import Cv from './components/Cv';
 import {Container, Button, Col, Row, Card} from "react-bootstrap";
 import {savePDF} from "@progress/kendo-react-pdf";
 import JsPDF from 'jspdf';
+import {CvOptionsContextProvider} from "./utils/CvOptionsContext";
+import CvOptions from "./components/CvOptions";
 
 function App() {
   const cv = useRef(null);
@@ -28,24 +30,31 @@ function App() {
   };
 
   return (
-    <div>
-      <Container>
-        <Row className="justify-content-center my-5">
-          <Col xs="auto">
-            <Button onClick={exportPDF}>Export to PDF</Button>
-          </Col>
-        </Row>
-        <Row className="justify-content-center mb-5">
-          <Col xs="auto">
-            <Card className="cv-page">
-              <div ref={cv} id="resume">
-                <Cv/>
-              </div>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+    <CvOptionsContextProvider>
+      <div>
+        <Container>
+          <Row className="justify-content-center my-5">
+            <Col xs="auto">
+              <CvOptions />
+            </Col>
+          </Row>
+          <Row className="justify-content-center my-5">
+            <Col xs="auto">
+              <Button onClick={exportPDF}>Export to PDF</Button>
+            </Col>
+          </Row>
+          <Row className="justify-content-center mb-5">
+            <Col xs="auto">
+              <Card className="cv-page">
+                <div ref={cv} id="resume">
+                  <Cv/>
+                </div>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </CvOptionsContextProvider>
   );
 }
 
