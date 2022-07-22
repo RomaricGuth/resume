@@ -30,7 +30,7 @@ function CvHeader() {
         </div>
       </div>
       <div className="photo">
-        <img src={photo} className="photo" />
+        <img src={photo} className="photo" alt="profile picture" />
       </div>
     </div>
   )

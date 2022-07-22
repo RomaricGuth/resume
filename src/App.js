@@ -3,7 +3,6 @@ import {useRef} from "react";
 import Cv from './components/Cv';
 import {Container, Button, Col, Row, Card} from "react-bootstrap";
 import {savePDF} from "@progress/kendo-react-pdf";
-import JsPDF from 'jspdf';
 import {CvOptionsContextProvider} from "./utils/CvOptionsContext";
 import CvOptions from "./components/CvOptions";
 

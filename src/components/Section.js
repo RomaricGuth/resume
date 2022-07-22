@@ -1,10 +1,6 @@
 import React from "react";
 
 class Section extends React.PureComponent {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className="section" style={this.props.style}>
