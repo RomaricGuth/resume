@@ -54,5 +54,6 @@
 
 .section-item-short {
   @extend .section-item, .text-body;
+  margin-bottom: $xsmall;
   justify-content: space-between;
 }

@@ -11,7 +11,7 @@ function CvBody() {
           title="Embedded Software Engineer Apprentice | SAGEMCOM"
         >
           <Achievement
-            text="Worked as main developper on the analytics collection module."
+            text="Worked as main developper on the analytics data collection module written in C++."
             skills={["C", "C++", "Linux"]}
           />
           <Achievement
@@ -90,6 +90,11 @@ function CvBody() {
             <div className="section-item-short">
               <div className="text-header3">Mathematics</div>
               Algebra, Statistics
+            </div>
+
+            <div className="section-item-short">
+              <div className="text-header3">Languages</div>
+              French, English (TOEIC 975/990)
             </div>
           </Section>
         </div>
