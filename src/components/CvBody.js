@@ -15,7 +15,7 @@ function CvBody() {
             skills={["C", "C++", "Linux"]}
           />
           <Achievement
-            text="Took part in the developpement of a custom Alexa skill designed to work as a hotline."
+            text="Took part in a custom Alexa skill's development designed to work as a hotline."
             skills={["Nodejs", "APL"]}
           />
         </Section.Item>
@@ -63,7 +63,7 @@ function CvBody() {
               />
               */}
               <div className="summary">
-                Mathematics and Computer Science License
+                Mathematics and Computer Science Degree
               </div>
               <div className="award">
                 Average : 16/20 Best Rank : 3/154
@@ -104,7 +104,7 @@ function CvBody() {
             </div>
             Developed in React Native.<br/>
             Allow users to create, import and customize their recipes within the app.<br/>
-            Makes it easy to plan meals through the week and generate a shopping list to eat homemade without pain.
+            Makes it easy to plan meals through the week and generate a shopping list to eat homemade without difficulties.
           </Section.Item>
           <Section.Item
             description="2022"
