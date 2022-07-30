@@ -119,7 +119,7 @@ function CvBody() {
               Web page - Women compared to Men in society since 2000.
             </div>
             <div className="cv-link">
-                <a className="fix" href="https://equals-front.herokuapp.com">https://equals-front.herokuapp.com</a>
+                <a href="https://equals-front.herokuapp.com">https://equals-front.herokuapp.com</a>
             </div>
             Programmed data prediction using mathematical interpolation functions.<br/>
             Developed an interface using Vue.js to visualize results and alter parameters.<br/>

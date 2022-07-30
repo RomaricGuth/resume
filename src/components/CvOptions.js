@@ -55,7 +55,7 @@ function CvOptions() {
   }, [setOption]);
 
   return (
-    <Form fluid>
+    <Form>
       <Row>
         <Col xs={12}>
           <Form.Group>
@@ -75,7 +75,7 @@ function CvOptions() {
             <Form.Control
               type="email"
               placeholder="Enter email"
-              value={options.email}
+              value={options.email ?? ""}
               onChange={onEmailChange}
             />
           </Form.Group>
@@ -86,7 +86,7 @@ function CvOptions() {
             <Form.Control
               type="tel"
               placeholder="Enter phone number"
-              value={options.phone}
+              value={options.phone ?? "hidden"}
               onChange={onPhoneChange}
             />
           </Form.Group>
