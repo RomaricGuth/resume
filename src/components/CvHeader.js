@@ -1,5 +1,5 @@
 import photo from '../assets/profile_picture.jpg'
-import {FaLinkedinIn, FaGithub, FaPhone} from "react-icons/fa";
+import {FaLinkedinIn, FaGithub, FaPhone, FaBirthdayCake} from "react-icons/fa";
 import {MdEmail} from "react-icons/md";
 import {useContext} from "react";
 import {CvOptionsContext} from "../utils/CvOptionsContext";
@@ -22,6 +22,7 @@ function CvHeader() {
             <div className="contact">
               <FaPhone className="cv-icon" /> {options.phone ? options.phone : "hidden"}<br/>
               <MdEmail className="cv-icon" /> {options.email ? options.email : "hidden"}<br/>
+              <FaBirthdayCake className="cv-icon" /> 22/03/2000 <br/>
             </div>
           </div>
         </div>

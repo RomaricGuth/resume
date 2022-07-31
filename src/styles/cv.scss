@@ -7,6 +7,12 @@
   flex-direction: row;
 }
 
+.cv-row-spaced {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .cv-column {
   display: flex;
   flex-direction: column;
@@ -34,6 +40,7 @@
   justify-content: space-around;
   padding-top: spacing.$medium;
   padding-bottom: spacing.$medium;
+  flex: 1;
 }
 
 .name {
@@ -49,8 +56,9 @@
 
 .contact-container {
   @extend .cv-row;
+  flex: 1;
+  justify-content: center;
   align-items: center;
-  margin-left: spacing.$medium;
 }
 
 .contact {
@@ -94,7 +102,7 @@
 
 .summary {
   font-size: $sectionHeader3FontSize;
-  margin-bottom: spacing.$small;
+  margin-bottom: spacing.$xxsmall;
 }
 
 .cv-middle-section {

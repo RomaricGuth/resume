@@ -10,13 +10,14 @@ function CvBody() {
           description="2019-2022"
           title="Embedded Software Engineer Apprentice | SAGEMCOM"
         >
+          <div className="summary">
+            Feedback : 19/20 - "Beyond expectations"
+          </div>
           <Achievement
-            text="Worked as main developper on the analytics data collection module written in C++."
+            text="Worked as main developer on the analytics data collection module written in C++.
+                  This program is embedded on TV set top boxes and communicates with a server hosted on AWS to provide
+                  debugging features along with performance and usage analysis."
             skills={["C", "C++", "Linux"]}
-          />
-          <Achievement
-            text="Took part in a custom Alexa skill's development designed to work as a hotline."
-            skills={["Nodejs", "APL"]}
           />
         </Section.Item>
         <Section.Item
@@ -47,8 +48,13 @@ function CvBody() {
               <div className="summary">
                 Master degree focused on Web, Mobile and Software development
               </div>
-              <div className="award">
-                Average : 16.83/20 Rank : 2/20
+              <div className="cv-row-spaced">
+                <div className="award">
+                  Average : 16.83/20
+                </div>
+                <div className="award">
+                  Rank : 2/20
+                </div>
               </div>
             </Section.Item>
             <Section.Item
@@ -65,8 +71,13 @@ function CvBody() {
               <div className="summary">
                 Mathematics and Computer Science Degree
               </div>
-              <div className="award">
-                Average : 16/20 Best Rank : 3/154
+              <div className="cv-row-spaced">
+                <div className="award">
+                  Average : 16/20
+                </div>
+                <div className="award">
+                  Best Rank : 3/154
+                </div>
               </div>
             </Section.Item>
           </Section>
@@ -94,7 +105,7 @@ function CvBody() {
 
             <div className="section-item-short">
               <div className="text-header3">Languages</div>
-              French, English (TOEIC 975/990)
+              French (Native), English (TOEIC 975/990)
             </div>
           </Section>
         </div>
@@ -122,7 +133,7 @@ function CvBody() {
                 <a href="https://equals-front.herokuapp.com">https://equals-front.herokuapp.com</a>
             </div>
             Programmed data prediction using mathematical interpolation functions.<br/>
-            Developed an interface using Vue.js to visualize results and alter parameters.<br/>
+            Developed a user interface using Vue.js to visualize results and alter parameters.<br/>
           </Section.Item>
         </Section>
       </div>
@@ -134,7 +145,7 @@ function CvBody() {
           Member of the French national team since 2014, several national and international awards
           <div className="cv-text-row">
             <div className="text-column">
-              U16
+              Under 16
             </div>
             <div className="text-column">
               World vice champion (2014)<br/>
@@ -142,7 +153,7 @@ function CvBody() {
               World bronze medalist (2016)
             </div>
             <div className="text-column">
-              U21
+              Under 21
             </div>
             <div className="text-column">
               European vice champion (2019)<br/>
