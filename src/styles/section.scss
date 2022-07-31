@@ -1,13 +1,13 @@
-@import 'text';
-@import 'spacing';
-@import 'colors';
+@use 'text';
+@use 'spacing';
+@use 'colors';
 
 .section {
   flex: 1;
 }
 
 .section-header {
-  margin-bottom: $medium;
+  margin-bottom: spacing.$medium;
   width: auto;
 }
 
@@ -16,15 +16,15 @@
 }
 
 .section-underline {
-  height: $hairline;
+  height: spacing.$hairline;
   width: auto;
-  background-color: $header1;
+  background-color: colors.$header1;
 }
 
 .section-item {
   display: flex;
   flex-direction: row;
-  margin-bottom: $medium;
+  margin-bottom: spacing.$medium;
 }
 
 .section-item-description {
@@ -33,10 +33,10 @@
 }
 
 .section-item-separator {
-  width: $hairline;
+  width: spacing.$hairline;
   height: auto;
-  background-color: $header3;
-  margin-inline: $small;
+  background-color: colors.$header3;
+  margin-inline: spacing.$small;
 }
 
 .section-item-content {
@@ -45,7 +45,7 @@
 
 .section-item-title {
   @extend .text-header2;
-  margin-bottom: $xsmall;
+  margin-bottom: spacing.$xsmall;
 }
 
 .section-item-body {
@@ -54,6 +54,6 @@
 
 .section-item-short {
   @extend .section-item, .text-body;
-  margin-bottom: $xsmall;
+  margin-bottom: spacing.$xsmall;
   justify-content: space-between;
 }

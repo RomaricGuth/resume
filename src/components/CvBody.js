@@ -30,7 +30,7 @@ function CvBody() {
           />
         </Section.Item>
       </Section>
-      <div className="cv-row">
+      <div className="cv-middle-row ">
         <div className="cv-middle-section">
           <Section>
             <Section.Header title="Education"/>

@@ -1,6 +1,8 @@
 @use 'colors';
 @use 'spacing';
-@import 'text';
+@use 'text';
+
+$header_height: 180px;
 
 .cv-row {
   display: flex;
@@ -29,6 +31,7 @@
   background-color: colors.$header1;
   justify-content: space-between;
   padding-inline: spacing.$medium;
+  height: $header_height;
 }
 
 .onHeader {
@@ -44,12 +47,12 @@
 }
 
 .name {
-  font-size: $bigFontSize;
+  font-size: text.$bigFontSize;
   font-weight: bold;
 }
 
 .title {
-  font-size: $bigFontSize;
+  font-size: text.$bigFontSize;
   margin-top: spacing.$medium;
   margin-bottom: spacing.$medium;
 }
@@ -70,15 +73,17 @@
 }
 
 .photo {
-  height: auto;
-  width: 4cm;
+  height: $header_height;
+  width: auto;
   background-color: colors.$header1;
 }
 
 .cv-body {
   @extend .cv-column;
   flex: 1;
-  padding: spacing.$medium;
+  padding-left: spacing.$medium;
+  padding-right: spacing.$medium;
+  padding-top: spacing.$xsmall;
 }
 
 .cv-text-row {
@@ -101,7 +106,13 @@
 }
 
 .summary {
-  font-size: $sectionHeader3FontSize;
+  font-size: text.$emphasisFontSize;
+  margin-bottom: spacing.$xxsmall;
+}
+
+.cv-middle-row {
+  @extend .cv-row;
+  margin-top: spacing.$xxsmall;
   margin-bottom: spacing.$xxsmall;
 }
 

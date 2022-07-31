@@ -1,4 +1,5 @@
 import './styles/styles.scss';
+import './styles/text.scss';
 import {useRef} from "react";
 import Cv from './components/Cv';
 import {Container, Button, Col, Row, Card} from "react-bootstrap";

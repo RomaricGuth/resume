@@ -1,10 +1,11 @@
 @use 'colors';
 
-$bigFontSize: 1cm;
-$sectionHeader1FontSize: 6mm;
-$sectionHeader2FontSize: 5mm;
-$sectionHeader3FontSize: 4mm;
-$bodyFontSize: 3.6mm;
+$bigFontSize: 38px;
+$sectionHeader1FontSize: 20px;
+$sectionHeader2FontSize: 18px;
+$sectionHeader3FontSize: 14px;
+$bodyFontSize: 13px;
+$emphasisFontSize: 16px;
 
 .text-body {
   font-size: $bodyFontSize;
@@ -23,4 +24,42 @@ $bodyFontSize: 3.6mm;
 .text-header3 {
   font-size: $sectionHeader3FontSize;
   color: colors.$header3;
+}
+
+/*
+    Use Roboto font for displaying and embedding in the PDF file.
+    The standard PDF fonts do not support Unicode characters.
+*/
+div {
+  @extend .text-body;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+/*
+    The example loads Robot from CDN.
+    Other fonts have to be hosted from your application.
+*/
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), url('https://fonts.cdnfonts.com/s/12165/Roboto-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Roboto'), url('https://fonts.cdnfonts.com/s/12165/Roboto-Italic.woff') format('woff');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto'), url('https://fonts.cdnfonts.com/s/12165/Roboto-Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Roboto'), url('https://fonts.cdnfonts.com/s/12165/Roboto-BoldItalic.woff') format('woff');
 }
