@@ -25,7 +25,7 @@ class Section extends React.PureComponent {
     return (
       <div className="section-item">
         <div className="section-item-description">
-          {description}
+          {typeof description === 'string' ? description : description()}
         </div>
       <div className="section-item-separator" />
       <div className="section-item-content">

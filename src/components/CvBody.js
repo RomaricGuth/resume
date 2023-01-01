@@ -7,16 +7,27 @@ function CvBody() {
       <Section>
         <Section.Header title="Experience"/>
         <Section.Item
-          description="2019-2022"
-          title="Embedded Software Engineer Apprentice | SAGEMCOM"
+          description={() => (
+            <div className="section-item-description">
+              Since 2022<br/>
+              Fulltime<br/>
+              <br/>
+              2019-2022<br/>
+              Apprentice
+            </div>
+          )}
+          title="Embedded Software Engineer | SAGEMCOM"
         >
           <div className="summary">
-            Feedback : 19/20 - "Beyond expectations"
+            Apprenticeship from Sept. 2019 to Sept. 2022&nbsp;&nbsp;|&nbsp;&nbsp;Feedback : 19/20 - "Beyond expectations"
           </div>
           <Achievement
-            text="Worked as main developer on the analytics data collection module written in C++.
-                  This program is embedded on TV set top boxes and communicates with a server hosted on AWS to provide
-                  debugging features along with performance and usage analysis."
+            text={
+              <div>
+                Worked as main developer and owner of the analytics data collection module embedded on TV set top boxes, written in C++.<br/>
+                Worked on a customized android open source project to speed up developments before new products' commercial launch.
+              </div>
+            }
             skills={["C", "C++", "Linux"]}
           />
         </Section.Item>
