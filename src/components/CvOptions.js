@@ -9,7 +9,7 @@ function CvOptions() {
   useEffect(() => {
     const url = new URL(window.location.href); // get current url
     const position = url.searchParams.get('position') ?? "Software Engineer";
-    const email = url.searchParams.get('email') ?? "ro.guth@free.fr";
+    const email = url.searchParams.get('email') ?? "contact@romaricguth.com";
     const phone = url.searchParams.get('phone');
 
     setOptions({

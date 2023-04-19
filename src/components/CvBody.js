@@ -9,7 +9,7 @@ function CvBody() {
         <Section.Item
           description={() => (
             <div className="section-item-description">
-              Since 2022<br/>
+              2022-2023<br/>
               Fulltime<br/>
               <br/>
               2019-2022<br/>
@@ -24,7 +24,7 @@ function CvBody() {
           <Achievement
             text={
               <div>
-                Worked as main developer and owner of the analytics data collection module embedded on TV set top boxes, written in C++.<br/>
+                Worked as lead developer on the analytics data collection module embedded on TV set top boxes, written in C++.<br/>
                 Worked on a customized android open source project to speed up developments before new products' commercial launch.
               </div>
             }
