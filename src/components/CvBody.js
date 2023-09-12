@@ -7,6 +7,14 @@ function CvBody() {
       <Section>
         <Section.Header title="Experience"/>
         <Section.Item
+          description="From 2023"
+          title="Freelance web developer"
+        >
+          <div className="summary">
+            Working on several web projects mostly using Next.js and Tailwind CSS.
+          </div>
+        </Section.Item>
+        <Section.Item
           description={() => (
             <div className="section-item-description">
               2022-2023<br/>
@@ -24,20 +32,11 @@ function CvBody() {
           <Achievement
             text={
               <div>
-                Worked as lead developer on the analytics data collection module embedded on TV set top boxes, written in C++.<br/>
-                Worked on a customized android open source project to speed up developments before new products' commercial launch.
+                Worked as lead developer on the analytics data collection module embedded on TV set top boxes, written in C++. Elevated the volume and accuracy of gathered data to enhance the significance of generated reports.<br/>
+                Worked on a customized android open source project to speed up debug and developments before commercial launch of a new product.
               </div>
             }
             skills={["C", "C++", "Linux"]}
-          />
-        </Section.Item>
-        <Section.Item
-          description="2018-2019"
-          title="Bridge Teacher | LYON YOUNG BRIDGE CLUB"
-        >
-          <Achievement
-            text="Taught bridge lessons up to 5h a week to initiate people aged from 13 to 35."
-            skills={["Teaching", "Patience"]}
           />
         </Section.Item>
       </Section>
@@ -57,7 +56,7 @@ function CvBody() {
               />
               */}
               <div className="summary">
-                Master degree focused on Web, Mobile and Software development
+                Master degree focused on Web and Mobile development
               </div>
               <div className="cv-row-spaced">
                 <div className="award">
@@ -94,19 +93,20 @@ function CvBody() {
           </Section>
           <Section>
             <Section.Header title="Skills"/>
-            <div className="section-item-short">
-              <div className="text-header3">Software development</div>
-              C, C++, Java
-            </div>
 
             <div className="section-item-short">
               <div className="text-header3">Web</div>
-               HTML, CSS, Javascript, React, Devops, AWS
+               Next.js, Tailwind CSS, Devops, SEO
             </div>
 
             <div className="section-item-short">
               <div className="text-header3">Mobile</div>
-              React Native, Kotlin, Android, Swift, IOS
+              React Native, Kotlin, Android OSP, Swift
+            </div>
+
+            <div className="section-item-short">
+              <div className="text-header3">Software development</div>
+              C, C++, Java
             </div>
 
             <div className="section-item-short">
@@ -123,7 +123,21 @@ function CvBody() {
         <Section>
           <Section.Header title="Projects"/>
           <Section.Item
-            description="Since 2020"
+            description="2023"
+            title="Le Mas d'Euliac"
+          >
+            <div className="summary">
+              Website - Guesthouse property showcase.
+            </div>
+            <div className="cv-link">
+                <a href="https://www.mas-euliac.fr/">https://www.mas-euliac.fr</a>
+            </div>
+            Designed and implemented a website showcasing a rental property, focusing on image optimization and responsive display modes to emphasize stunning property visuals.
+          </Section.Item>
+          <br/>
+          <br/>
+          <Section.Item
+            description="Since 2021"
             title="Planeat - Personal project"
           >
             <div className="summary">
@@ -133,19 +147,6 @@ function CvBody() {
             Allow users to create, import and customize their recipes within the app.<br/>
             Makes it easy to plan meals through the week and generate a shopping list to eat homemade without difficulties.
           </Section.Item>
-          <Section.Item
-            description="2022"
-            title="Equals - EPITA"
-          >
-            <div className="summary">
-              Web page - Women compared to Men in society since 2000.
-            </div>
-            <div className="cv-link">
-                <a href="https://equals-front.herokuapp.com">https://equals-front.herokuapp.com</a>
-            </div>
-            Programmed data prediction using mathematical interpolation functions.<br/>
-            Developed a user interface using Vue.js to visualize results and alter parameters.<br/>
-          </Section.Item>
         </Section>
       </div>
       <Section>
@@ -153,23 +154,17 @@ function CvBody() {
         <Section.Item
           description="Bridge"
         >
-          Member of the French national team since 2014, several national and international awards
-          <div className="cv-text-row">
-            <div className="text-column">
-              Under 16
+          Member of the French national team since 2014, several national and international awards :
+          <ul className="cv-text-row">
+            <div className="cv-text-column">
+              <li>Under 31 World champion (2023)</li>
+              <li>Under 21 European silver medalist (2019)</li>
             </div>
-            <div className="text-column">
-              World vice champion (2014)<br/>
-              European vice champion (2015)<br/>
-              World bronze medalist (2016)
+            <div className="cv-text-column">
+              <li>Under 16 World silver medalist (2014)</li>
+              <li>Under 16 European silver medalist (2015)</li>
             </div>
-            <div className="text-column">
-              Under 21
-            </div>
-            <div className="text-column">
-              European vice champion (2019)<br/>
-            </div>
-          </div>
+          </ul>
         </Section.Item>
         <Section.Item
           description="Piano"

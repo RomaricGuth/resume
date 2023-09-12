@@ -9,6 +9,11 @@ $header_height: 180px;
   flex-direction: row;
 }
 
+.cv-head-row {
+  @extend .cv-row;
+  justify-content: space-between;
+}
+
 .cv-row-spaced {
   display: flex;
   flex-direction: row;
@@ -91,6 +96,11 @@ $header_height: 180px;
   justify-content: space-between;
   align-items: center;
   margin-top: spacing.$tiny;
+}
+
+.cv-text-column {
+  @extend .cv-column;
+  flex: 1;
 }
 
 .achievement {
